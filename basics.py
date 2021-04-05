@@ -1,15 +1,19 @@
-starting_lineup = [
-    ["Guard", 9, "Miami Unviseristy", "Ron Harper"],
-    ["Forward", 7, "Croatia", "Tony Kukoc"],
-    ["Forward", 91, "Southeastern OKC", "Dennis Rodman"],
-    ["Forward", 33, "Central Arkansas", "Scottie Pippen"],
-    ["Guard", 23, "North Carolina", "Michael Jordan"],
+starting_lineup_bulls = [
+    {"position": "Guard", "jersey": 9,
+        "college": "Miami Unviseristy", "name": "Ron Harper"},
+    {"position": "Forward", "jersey": 7, "college": "Croatia", "name": "Tony Kukoc"},
+    {"position": "Forward", "jersey": 91,
+        "college": "Southeastern OKC", "name": "Dennis Rodman"},
+    {"position": "Forward", "jersey": 33,
+        "college": "Central Arkansas", "name": "Scottie Pippen"},
+    {"position": "Guard", "jersey": 23,
+        "college":  "North Carolina", "name": "Michael Jordan"},
 ]
 
-for player in starting_lineup:
-    position = player[0]
-    jersey = player[1]
-    college = player[2]
-    name = player[3]
+for player in starting_lineup_bulls:
+    position = player["position"]
+    jersey = player["jersey"]
+    college = player["college"]
+    name = player["name"]
     player_string = f"At {position} number {jersey} from {college}, {name}!"
     print(player_string)
